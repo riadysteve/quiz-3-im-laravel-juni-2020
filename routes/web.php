@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +23,11 @@ Route::get('/items/{id}', 'ItemController@show'); // menampilkan detail item den
 Route::get('/items/{id}/edit', 'ItemController@edit'); // menampilkan form untuk edit item
 Route::put('/items/{id}', 'ItemController@update'); // menyimpan perubahan dari form edit
 Route::delete('/items/{id}', 'ItemController@destroy'); // menghapus data dengan id
+
+Route::get('/article', 'ArticleController@index');
+Route::get('/article/create', 'ArticleController@create');
+Route::post('/article', 'ArticleController@store');
+Route::get('/article/{id}', 'ArticleController@show');
+Route::get('/article/{id}/edit', 'ArticleController@edit');
+Route::put('/article/{id}', 'ArticleController@update');
+Route::delete('/article/{id}', 'ArticleController@destroy');
